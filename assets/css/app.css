@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Oswald;
+  src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+}
+
+a {
+  text-decoration: none !important;
+  color: white;
+  transition: 0.3s all;
+}
+
+a:hover {
+  color: #dfdfdf;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(222, 26, 55, 1), rgba(161, 31, 43, 0.7)),
+    url("../img/bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+#app .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#app .navbar .logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  background-image: url("../img/logoBlanco.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#app .navbar .menu .menu-item {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+#app .navbar .menu .menu-item:hover {
+  color: #d1d042;
+}
+
+#app .text {
+  margin: auto;
+  text-align: center;
+}
+
+#app .text h1 {
+  font-family: Oswald;
+  font-size: 5rem;
+  color: #fafafa;
+  padding: 2rem 0;
+  margin-bottom: 2.5rem;
+  border-top: 4px solid #d1d042;
+  border-bottom: 4px solid #d1d042;
+}
+
+#app .text p {
+  color: #ececec;
+  margin: 1rem;
+}
+
+.construction {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+#app .text #timer {
+  font-size: 1rem;
+}
+
+#app .text #timer span {
+  color: #d1d042;
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
+#app .text .btn {
+  border-radius: 20px;
+  width: 30%;
+  color: #de1a37;
+  background-color: #d1d042;
+  padding: 0.5rem 1.5rem;
+}
+
+#app .text .btn:hover {
+  border-color: #fafafa;
+}
+
+#app .text .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#app .copyright {
+  font-size: 0.8rem;
+  color: #fafafa;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+#app .copyright .text .links {
+  font-size: 2rem;
+}
+
+#app .copyright .text .links a {
+  color: white;
+}
+
+.footer {
+  display: flex;
+}
+/* Media Queries */
+
+@media (max-width: 575.98px) {
+  #app .navbar .logo {
+    width: 70px;
+    height: 40px;
+  }
+  #app .text h1 {
+    padding: 1.6rem 0 1rem 0;
+    font-size: 2rem;
+  }
+  #app .text #timer span {
+    font-size: 1.5rem;
+  }
+  #app .navbar .menu .menu-item {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+  #app .text {
+    padding: 0 2rem;
+  }
+}
