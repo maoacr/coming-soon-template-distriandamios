@@ -86,11 +86,20 @@ a:hover {
 }
 
 #app .text .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   border-radius: 20px;
   width: 30%;
   color: #de1a37;
   background-color: #d1d042;
   padding: 0.5rem 1.5rem;
+}
+
+i {
+  font-size: 1.4em;
+  margin: 0 0 -5px 5px;
 }
 
 #app .text .btn:hover {
