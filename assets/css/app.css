@@ -68,6 +68,7 @@ a:hover {
 #app .text p {
   color: #ececec;
   margin: 1rem;
+  padding-bottom: 30px;
 }
 
 .construction {
@@ -116,11 +117,15 @@ i {
   bottom: 0;
   width: 100%;
   display: flex;
-  padding-bottom: 1rem;
+}
+
+i .github {
+  margin-right: 30px;
 }
 
 #app .copyright .text .links {
-  font-size: 2rem;
+  font-size: 1rem;
+  margin: 0 0 -15px 20px;
 }
 
 #app .copyright .text .links a {
@@ -133,25 +138,69 @@ i {
 /* Media Queries */
 
 @media (max-width: 768px) {
+  #app .text h1 {
+    font-family: Oswald;
+    font-size: 4rem;
+    color: #fafafa;
+    padding: 2rem 0;
+    margin-bottom: 2.5rem;
+    border-top: 4px solid #d1d042;
+    border-bottom: 4px solid #d1d042;
+  }
+  #app .text p {
+    margin: 1.5rem 2rem;
+  }
+  #app .text .btn {
+    width: 230px;
+  }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 425px) {
   #app .navbar .logo {
-    width: 70px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+  }
+  #app .text {
+    padding: 0 1rem;
   }
   #app .text h1 {
-    padding: 1.6rem 0 1rem 0;
-    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-size: 3rem;
+  }
+  #app .text #timer {
+    font-size: 1rem;
+  }
+  #app .text p {
+    margin: 1.5rem 0rem;
   }
   #app .text #timer span {
-    font-size: 1.5rem;
+    font-size: 2em;
+  }
+  .construction {
+    font-size: 1rem;
+    font-weight: 500;
   }
   #app .navbar .menu .menu-item {
     font-size: 1rem;
     padding: 0.6rem;
   }
-  #app .text {
-    padding: 0 2rem;
+  #app .text .mobile {
+    margin: 0rem 0rem;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 320px) {
+  #app .text h1 {
+    margin-top: 4rem;
+    margin-bottom: 0px;
+    font-size: 2.3rem;
+  }
+  #app .text p {
+    padding-bottom: 0px;
+  }
+  #app .text .mobile {
+    margin: 0rem 0rem;
+    padding: 1rem 0;
+    font-size: 0.2rem;
   }
 }
