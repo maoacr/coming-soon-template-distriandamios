@@ -91,17 +91,15 @@ a:hover {
   align-items: center;
   margin: 0 auto;
   border-radius: 20px;
-  width: 30%;
+  width: 28%;
   color: #de1a37;
   background-color: #d1d042;
   padding: 0.5rem 1.5rem;
 }
-
 i {
-  font-size: 1.4em;
-  margin: 0 0 -5px 5px;
+  font-size: 1.8em;
+  margin: 0 0 -1px 10px;
 }
-
 #app .text .btn:hover {
   border-color: #fafafa;
 }
@@ -133,6 +131,9 @@ i {
   display: flex;
 }
 /* Media Queries */
+
+@media (max-width: 768px) {
+}
 
 @media (max-width: 575.98px) {
   #app .navbar .logo {
