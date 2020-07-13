@@ -1,27 +1,31 @@
-class Timera {
-  constructor(date, elementID) {
-    this.element = $("#" + elementID);
-    this.date = date;
-  }
-  calculateSecounds() {
-    var now = new Date();
-    var calculated = this.date - now;
-    return Math.floor(calculated / 1000);
-  }
-  show() {
-    var calculated = this.calculateSecounds();
-    window.a = $($(this.element).find("#seconds")).html(calculated % 60);
-    calculated = Math.floor(calculated / 60);
-    window.a = $($(this.element).find("#minutes")).html(calculated % 60);
-    calculated = Math.floor(calculated / 60);
-    window.a = $($(this.element).find("#hours")).html(calculated % 24);
-    calculated = Math.floor(calculated / 24);
-    window.a = $($(this.element).find("#days")).html(calculated);
-  }
+const targetDate = new Date("August 13, 2020 00:00:00");
+
+function Timera(date, daysID, hoursID, minutesID, secondsID) {
+  this.targetDate = date;
+  this.days = document.getElementById(daysID);
+  this.hours = document.getElementById(hoursID);
+  this.minutes = document.getElementById(minutesID);
+  this.seconds = document.getElementById(secondsID);
 }
-$(document).ready(function () {
-  var date = new Date("2020.08.13");
-  window.timer = new Timera(date, "timer");
-  timer.show();
-  setInterval("timer.show()", 1000);
-});
+
+Timera.prototype.setDifferenceTime = function (){
+  return Math.floor((this.targetDate - new Date()) / 1000);
+}
+
+Timera.prototype.showTimer = function (){
+  let currentTime = this.setDifferenceTime();
+  this.seconds.innerText = Math.floor(currentTime % 60);
+  currentTime /= 60;
+  this.minutes.innerText = Math.floor(currentTime % 60);
+  currentTime /= 60;
+  this.hours.innerText = Math.floor(currentTime % 24);
+  currentTime /= 24;
+  this.days.innerText = Math.floor(currentTime);
+}
+
+myTimer = new Timera(targetDate, "days", "hours", "minutes", "seconds");
+
+setInterval(
+  function(){ myTimer.showTimer() }
+  , 1000
+);
