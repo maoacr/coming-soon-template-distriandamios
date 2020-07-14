@@ -24,6 +24,7 @@ Timera.prototype.showTimer = function (){
 }
 
 myTimer = new Timera(targetDate, "days", "hours", "minutes", "seconds");
+myTimer.showTimer() // First run, no need to wait for `setInterval`
 
 setInterval(
   function(){ myTimer.showTimer() }
