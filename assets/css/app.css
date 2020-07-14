@@ -1,21 +1,18 @@
-/*@font-face {
-  font-family: Oswald;
-  src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
-  src: url(../fonts/Oswald-VariableFont_wght.ttf);
-}*/
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap'); */
 @font-face {
-  font-family: "oswaldregular", sans-serif;
-  src: url("https://www.distriandamios.com/assets/font/oswald-variablefont_wght-webfont.woff2")
-      format("woff2"),
-    url("https://www.distriandamios.com/assets/font/oswald-variablefont_wght-webfont.woff")
-      format("woff"),
-    url("https://www.distriandamios.com/assets/font/oswald-variablefont_wght.ttf")
-      format("ttf"),
-    url("https://www.distriandamios.com/assets/font/oswald-variablefont_wght.svg")
-      format("svg");
+  font-family: Oswald;
   font-weight: normal;
   font-style: normal;
+  src: url("../fonts/oswald-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("../fonts/oswald-variablefont_wght-webfont.woff")
+      format("woff"),
+      url("../fonts/oswald-variablefont_wght.svg")
+      format("svg"),
+    url("../fonts/oswald-variablefont_wght.ttf")
+      format("ttf");
 }
+
 a {
   text-decoration: none !important;
   color: white;
@@ -69,7 +66,7 @@ a:hover {
 }
 
 #app .text h1 {
-  font-family: "oswaldregular";
+  font-family: Oswald;
   font-weight: normal;
   font-style: normal;
   font-size: 5rem;
